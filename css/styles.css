@@ -5,15 +5,15 @@
  .row-content {
      margin: 0px auto;
      padding: 50px 0px 50px 0px;
-     border-bottom: 1px ridge cadetblue;
+     border-bottom: 1px solid #ddd;
 
      min-height: 400px;
  }
 
  .row-content-about {
     margin: 0px auto;
-    padding: 10px 0px 10px 0px;
-    border-bottom: 1px ridge cadetblue;
+    padding: 10px 0px 40px 0px;
+    
 }
 
  .footer {
@@ -22,7 +22,7 @@
      padding: 20px 0px 20px 0px;
  }
 
- .jumbotron{
+ .jumbotron {
      padding: 70px 30px 70px 30px;
      margin: 0px auto;
      background-color: darkviolet;
@@ -38,7 +38,6 @@
  .p-content {
      margin: 0px auto;
     padding: 0px 0px 20px 0px;
-    border-bottom: 1px ridge honeydew;
 
  }
  .p-content-header {
@@ -60,4 +59,11 @@ body {
 .btn-color {
     background-color: rgb(231, 149, 26);
     color: oldlace;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 15px;
 }
