@@ -23,18 +23,76 @@
 
             </button>
             <a class="navbar-brand ml-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
-            <div class="collapse navbar-collapse" id=Navbar>
+            <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href=""><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
                 </ul>
+
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#LoginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+
+                </span>
             </div>
             
         </div>
         
     </nav>
+
+    <div id="LoginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                             
+                <div class="form-row">
+                   <div class="form-group col-sm-4">
+                    <label for="username" class="sr-only">Username</label>
+                    <input type="text" class="form-control  form-control-sm ml-auto" id="username" name="username" placeholder="Username">
+
+                </div>
+
+              
+                <div class="form-group col-sm-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" class="form-control form-control-sm ml-1" id="password" name="password" placeholder="Password">
+
+                </div>
+
+            </div>
+            <div class="form-row">
+                
+                <div class="col-sm-auto mr-1">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="remember" class="form-check-label">
+                            Remember Me
+                        </label>                  
+
+                </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+            </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -47,7 +105,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#reserve" ><button class="btn btn-color">Reserve a Table</button></a>
+                    <a href="#reserve" role="button" class="btn btn-block nav-link btn-color" data-toggle="tooltip" data-html="true" title="or Call us at <br><strong>+852 1234567</strong" data-placement="top">Reserve a Table</a>
 
                 </div>
             </div>
@@ -226,6 +284,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
