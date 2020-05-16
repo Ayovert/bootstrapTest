@@ -87,3 +87,7 @@ body {
 .row-col {
     padding-top: 50px;
 }
+
+#reserveModal {
+    color: darkslategray;
+}
