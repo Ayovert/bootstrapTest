@@ -32,7 +32,7 @@
                 </ul>
 
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#LoginModal">
+                    <a href="#" role="button" id="LoginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
 
@@ -48,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <a role="button" href="#" class="close" id="LoginXButton">&times;</a>
 
                 </div>
 
@@ -69,21 +69,23 @@
 
                 </div>
 
-            </div>
-            <div class="form-row">
-                
-                <div class="col-sm-auto mr-1">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
+                <div class="form-group col-sm-auto">
+                    <div class="form-check mr-1">
+                        <input type="checkbox" class="btn form-check-input">
                         <label for="remember" class="form-check-label">
                             Remember Me
                         </label>                  
 
                 </div>
-                </div>
-                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+
             </div>
+        </div>
+            <div class="form-row">
+                
+                <a role="button" href="#" class="btn btn-secondary btn-sm ml-auto" id="LoginCButton">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+                </div>
+                
                     </form>
 
                 </div>
@@ -107,7 +109,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="" role="button" class="btn btn-block nav-link btn-color" data-toggle="modal" data-target="#reserveModal">Reserve a Table</a>
+                    <a href="#" role="button" class="btn btn-block nav-link btn-color"  id="modalButton">Reserve a Table</a>
 
                 </div>
             </div>
@@ -117,7 +119,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">Reserve a Table</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <a href="#" role="button" class="close"  id="modalXButton">&times;</a>
         
                         </div>
         
@@ -190,8 +192,7 @@
                                     <div class="form-group row">
 
                                         <div class="offset-md-2 col-md-3">
-                                            <button class="btn btn-secondary"> Cancel</button>
-                                       
+                                            <a href="#" role="button" class="btn btn-secondary"  id="modalCButton">Cancel</a>
                                             <button class="btn btn-primary"> Reserve</button>
 
                                             </div>
@@ -404,10 +405,40 @@
                     $('#CarouselButton').children('span').addClass('fa-pause');
                 }
             });
+            
+            $('#modalButton').click(function(){
+                $('#reserveModal').modal('show');
+                
+            });
+            $('#modalXButton').click(function(){
+                $('#reserveModal').modal('hide');
+                
+            });
 
-           
-        });
+            $('#modalCButton').click(function(){
+                $('#reserveModal').modal('hide');
+                
+            });
+
+            $('#LoginButton').click(function(){
+                $('#LoginModal').modal('show');
+                
+            });
+
+            $('#LoginXButton').click(function(){
+                $('#LoginModal').modal('hide');
+                
+            });
+
+            $('#LoginCButton').click(function(){
+                $('#LoginModal').modal('hide');
+                
+            });
+
+                       
+               });
     </script>
+
     
 
 </body>

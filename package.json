@@ -9,7 +9,7 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/"
   },
-  "author": "",
+  "author": "Ayobami Jimoh",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0",
@@ -21,5 +21,10 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayovert/bootstrapTest.git"
+  },
+  "homepage": "https://github.com/Ayovert/bootstrapTest#readme"
 }
